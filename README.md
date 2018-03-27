@@ -9,7 +9,9 @@ Socket.io Demo for [my talk](https://www.meetup.com/jstl-meetup/events/246238002
 
 
 ## Installation
-`npm i`
+1. `git clone https://github.com/andywise/socket.io-demo.git`
+2. `cd socket.io-demo`
+3. `npm i`
 
 ## How to use
 1. `npm start`
