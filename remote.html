@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remote</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    Remote
+    <button onclick="send()">send</button>
+    <button onclick="changeColor()">color!</button>
+    <script>
+        var socket = io()
+
+        socket.on('hello', (data) => {
+            console.log(data)
+        })
+        socket.on('thanks', (data) => {
+            console.log(`${data} says thanks`)
+        })
+
+        let send = () => {
+            socket.emit('sendToScreen','hello screen!')
+        }
+        let changeColor = () => {
+            socket.emit('changeColor')
+        }
+    </script>
+</body>
+</html>
